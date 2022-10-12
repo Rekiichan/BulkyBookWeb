@@ -7,7 +7,6 @@ namespace BulkyBookWeb.Models
     public class Category
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Required]
 
