@@ -3,6 +3,7 @@
     ViewData["Title"] = "Index";
 }
 
+<partial name="_Notification" />
 <div class="container p-3">
     <div class="row pt-4">
         <div class="col-6">
@@ -34,15 +35,22 @@
         @foreach (var obj in Model)
         {
             <tr>
-                <td width="50%">
+                <td width="43%">
                     <a class="nav-link text-white">@obj.Name</a>
                 </td>
                 <td width="43%">
                     <a class="nav-link text-white">@obj.DisplayOrder</a>
                 </td>
-                <td>
+                <td width="7%">
                     <dib class="w-75 btn-group" role="group">
-                        <a class="nav-link text-white" asp-controller="Category" asp-action="Edit" asp-route-id="@obj.Id"><i class="bi bi-pencil-square"></i>  Edit</a>
+                        <a class="nav-link text-white" asp-controller="Category" asp-action="Edit" asp-route-id="@obj.Id"
+                        class="btn btn-primary" mx-2><i class="bi bi-pencil-square"></i>  Edit</a>
+                    </dib>
+                </td>
+                <td width="7%">
+                    <dib class="w-75 btn-group" role="group">
+                        <a class="nav-link text-white" asp-controller="Category" asp-action="Delete" asp-route-id="@obj.Id"
+                       class="btn btn-dan" mx-2><i class="bi bi-trash" class="btn btn-danger" mx-2></i>  Delete</a>
                     </dib>
                 </td>
             </tr>
