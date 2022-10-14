@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Category>
+﻿@model IEnumerable<BulkyBook.Models.Category>
 @{
     ViewData["Title"] = "Index";
 }
@@ -21,13 +21,13 @@
     <thead>
         <tr>
             <th>
-                <a class="nav-link text-white">Category Name</a>
+                <a class="nav-link text-black">Category Name</a>
             </th>
             <th>
-                <a class="nav-link text-white">Display Order</a>
+                <a class="nav-link text-black">Display Order</a>
             </th>
             <th>
-                <a class="nav-link text-white">EDIT</a>
+                <a class="nav-link text-black">EDIT</a>
             </th>
         </tr>
     </thead>
@@ -35,21 +35,21 @@
         @foreach (var obj in Model)
         {
             <tr>
-                <td width="43%">
-                    <a class="nav-link text-white">@obj.Name</a>
+                <td width="42%">
+                    <a class="nav-link text-black">@obj.Name</a>
                 </td>
-                <td width="43%">
-                    <a class="nav-link text-white">@obj.DisplayOrder</a>
+                <td width="42%">
+                    <a class="nav-link text-black">@obj.DisplayOrder</a>
                 </td>
                 <td width="7%">
                     <dib class="w-75 btn-group" role="group">
-                        <a class="nav-link text-white" asp-controller="Category" asp-action="Edit" asp-route-id="@obj.Id"
+                        <a class="nav-link text-black" asp-controller="Category" asp-action="Edit" asp-route-id="@obj.Id"
                         class="btn btn-primary" mx-2><i class="bi bi-pencil-square"></i>  Edit</a>
                     </dib>
                 </td>
-                <td width="7%">
+                <td>
                     <dib class="w-75 btn-group" role="group">
-                        <a class="nav-link text-white" asp-controller="Category" asp-action="Delete" asp-route-id="@obj.Id"
+                        <a class="nav-link text-black" asp-controller="Category" asp-action="Delete" asp-route-id="@obj.Id"
                        class="btn btn-dan" mx-2><i class="bi bi-trash" class="btn btn-danger" mx-2></i>  Delete</a>
                     </dib>
                 </td>
